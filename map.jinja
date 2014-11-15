@@ -1,0 +1,30 @@
+
+{% set pkgs = ['ffmpeg', 'mplayer'] %}
+{% set base_dir = '/opt/ffmpeg' %}
+
+{% set server = salt['grains.filter_by']({
+    'Debian': {
+        'base_dir': base_dir,
+        'base_url': ffmpeg_base_url,
+        'pkgs': pkgs,
+        'version': version,
+    },
+    'Arch': {
+        'base_dir': base_dir,
+        'base_url': ffmpeg_base_url,
+        'pkgs': pkgs,
+        'version': version,
+    },
+    'RedHat': {
+        'base_dir': base_dir,
+        'pkgs': pkgs,
+        'base_url': ffmpeg_base_url,
+        'version': version,
+    },
+    'Windows': {
+        'base_dir': base_dir,
+        'base_url': ffmpeg_base_url,
+        'pkgs': pkgs,
+        'version': version,
+    },
+}, merge=salt['pillar.get']('ffmpeg:server')) %}
