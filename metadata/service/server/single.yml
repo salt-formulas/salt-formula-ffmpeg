@@ -1,0 +1,17 @@
+applications:
+- ffmpeg
+parameters:
+  ffmpeg:
+    server:
+      enabled: true
+      input:
+        video0:
+          source: /dev/video0
+          bind:
+            host: 0.0.0.0
+            port: 8888
+          video_format: mjpeg
+          width: 640
+          height: 480
+          format: mpeg
+          codec: avi
