@@ -1,8 +1,15 @@
-# ffmpeg
+
+==============
+ffmpeg formula
+==============
 
 A complete, cross-platform solution to record, convert and stream audio and video.
 
-## Sample pillars
+
+Sample pillars
+==============
+
+.. code-block:: yaml
 
     ffmpeg:
       server:
@@ -21,6 +28,7 @@ A complete, cross-platform solution to record, convert and stream audio and vide
 
 note: type in your browser http://192.168.2.1:8888/video0.mjpeg
 
-## Read More
+Read more
+=========
 
 * https://www.ffmpeg.org/
